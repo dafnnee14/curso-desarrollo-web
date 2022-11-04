@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plantilla de una página web</title>
+
+
+    <style>
+     
+        body {
+            margin: 0;
+        }
+
+        section {
+            display: flex;
+        }
+
+        section div {
+            padding: 10px;
+        }
+
+        header {
+            background-color: rgb(235, 179, 235);
+            color: white;
+            height: 180px;
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        header h1 {
+            margin-bottom: 0;
+        }
+
+        nav {
+            background-color: rgb(41, 37, 37);
+            display: flex;
+            justify-content: space-between;
+
+            padding: 5px 0;
+        }
+        /* Si le indicamos 2 cifras al padding, tomará el primer valor para el padding vertical y el segundo para el horizontal */
+
+        nav a {
+            text-decoration: none;
+            color: rgb(240, 230, 230);
+
+            padding: 5px;
+        }
+        /* :Hover es un estado especial, que se aplica al pasar el ratón/cursor por encima del elemento */
+        nav a:hover {
+            color: rgb(75, 75, 75);
+            background-color: rgb(220,220,220);
+        }
+
+        section {
+            display: flex;
+        }
+
+        section div {
+            padding: 10px;
+        }
+        .div-izq {
+            width: 30%;
+        }
+
+        .div-der {
+            width: 70%
+        }
+
+        footer {
+            background-color: lightgrey;
+            text-align: center;
+            padding: 1%;
+        }
+    </style>
+</head>
+
+
+
+
+
+
+
+
+
+
+<body>
+    <header>
+        <h1>Veterinaría de Dafne</h1>
+        <h5>a website created by me</h5>
+    </header>
+
+    <nav>
+        <div>
+            <a href="#">botom</a>
+            <a href="#">botom</a>
+            <a href="#">botom</a>
+        </div>
+        <div>
+            <a href="#">botom</a>
+        </div>
+    </nav>
+
+    <section>
+        <div class="div-der">
+            <h2>About me</h2>
+            <p>Photo of Veterinaria</p>
+            <img width="100%" height="250px" src="https://loboapp.es/wp-content/uploads/2021/12/recursos-digitales.png"
+                alt="Veterinaria">
+            <P>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sapiente, sit?</P>
+            <h3>More text</h3>
+            <p>Lorem ipsum dolor sit amet consectetur.</p>
+            <img width="100%" height="250px"
+                src="https://i0.wp.com/www.madridlicencias.com/blog/wp-content/uploads/Licencia-Actividad-cl%C3%ADnica-veterinaria.jpg?ssl=1"
+                alt="Gato">
+            <img width="100%" height="250px" src="https://imgcom.masterd.es/32/blog/2021/01/41303.png" alt="perro">
+            <img width="100%" height="250px"
+                src="https://escuelafarmacia.com/wp-content/uploads/cl%C3%ADnica-veterinaria.jpg" alt="Perro">
+        </div>
+        <div class="div-izq">
+            <h2>Segundo título</h2>
+            <p>Descripción del segundo título</p>
+            <img width="100%" height="250px"
+                src="https://wakyma.com/wakymavets/blog/wp-content/uploads/2017/08/7-Consejos-para-mejorar-el-rendimiento-de-ventas-de-tu-Cli%CC%81nica-Veterinaria.jpg"
+                alt="Veterinaria">
+            <p>More text</p>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                Et minus eos soluta itaque explicabo architecto vitae, recusandae,
+                ratione qui eaque, aperiam dolore quod quos!</p>
+        </div>
+    </section>
+
+    <footer>
+        <h2>Footer</h2>
+    </footer>
+
+
+</body>
+
+</html>

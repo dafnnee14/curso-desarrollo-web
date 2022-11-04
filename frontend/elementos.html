@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elementos avanzados de HTML</title>
+    <link rel="stylesheet" href="general.css">
+
+    <style>
+        /* para agregar un comentario como éste, es con las convinaciones "ctrl + ç" */
+        /* Se seleccionan las "a" que estan dentro de un "div" */
+      
+      div{
+        display: flex;
+        justify-content: center;
+        /* Ejemplo de como centrar el link o boton */
+      }
+        div a {
+            text-decoration: none;
+
+            background-color: rgb(80,80,80);
+            color: white;
+            padding: 5px;
+            border-radius: 5px;
+        }
+        h1{
+            border: 1px solid black;
+            text-align: center;
+        }
+    </style>
+
+</head>
+<body>
+    <h1>Elementos avanzados de HTML</h1>
+
+    <h2>Links o Hipervinculos</h2>
+    <p>
+        Los links se encuentran en todo tipo de paginas, permiten al usuario navegar por la web
+        o por los documentos de la web.
+    </p>
+    <p>
+        Cuando clicas en un link te lleva a otro documento o a una parte concreta del mismo.
+    </p>
+    <p>
+        Cuando se pasa el cursor sobre el link, éste se torna en mano.
+    </p>
+    <p>
+        un link se define mediante el elemento <code>&lt;a&gt;</code>
+    </p>
+    <p>
+        La sintaxis de un link por norma general es: <br>
+        <code>
+            &lt;a href="url"&gt; Texto del link&lt;/a&gt;
+        </code>
+    </p>
+    <p>
+        El atributo más importante de un link es el "href" ya que es éste el que indica
+        el punto al que nos llevara el link.
+    </p>
+    <p>Ejemplos</p>
+    <a href="https://www.google.es" target="_blank">Link a Google</a> <br>
+    <!-- el "target" es para cuando se clica el link se abra en una nueva pestaña -->
+    <a href="CSS-basico.html">Link a la teoria de CSS</a>
+
+    <p>
+        Los link tienen 3 estados:
+        <ul>
+            <li style="color: blue">Son azules cuando no han sido visitados.</li>
+            <li style="color: purple">Morados cuando ya han sido clicleados.</li>
+            <li style="color: red">Rojos cuando están activos.</li>
+        </ul>
+    </p>
+    <p>
+        Los link se pueden modificar mediante CSS para que tengan un asprecto completamente
+        dsitinto.
+    </p>
+
+    <div>
+        <a href="#">Esto es un link</a>
+    </div>
+
+    <h3>Usar una imagen como link</h3>
+    <a target="_blank" href="https://www.altostratus.es/novedades-google-workspace/">
+        <img width="80%" src="https://www.altostratus.es/wp-content/uploads/maxresdefault.jpg" alt="">
+    </a>
+
+
+
+</body>
+</html>

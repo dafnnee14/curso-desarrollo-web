@@ -1,0 +1,70 @@
+form.simple-form {
+    background: linear-gradient(45deg, rgb(150, 209, 255, 0.55),
+            transparent);
+    background: radial-gradient(ellipse farthest-side at 76% 77%, rgba(245, 228, 212, 0.25) 4%, rgba(255, 255, 255, 0) calc(4% + 1px)), radial-gradient(circle at 76% 40%, #fef6ec 4%,
+            rgba(255, 255, 255, 0) 4.18%), linear-gradient(135deg, #ff0000 0%, #000036 100%), radial-gradient(ellipse at 28% 0%, #ffcfac 0%, rgba(98, 149, 144, 0.5) 100%), linear-gradient(180deg,
+            #cd6e8a 0%, #f5eab0 69%, #d6c8a2 70%, #a2758d 100%);
+    background-blend-mode: normal, normal, screen, overlay, normal;
+    padding: 10px;
+    border-radius: 4px;
+}
+
+/* Selecciona únicamente a los hijos del form */
+form.simple-form>div {
+    display: flex;
+    justify-content: space-between;
+
+    width: 350px;
+    margin-bottom: 5px;
+}
+
+form.simple-form h2,
+h1 {
+    font-family: "chill-out gang";
+
+}
+
+/* Selecciona al div que es el último hijo del form */
+form.simple-form div:last-child {
+    justify-content: flex-start;
+}
+
+form.simple-form input,
+form.simple-form div button {
+    border: none;
+    border-radius: 4px;
+    background-color: rgb(255, 255, 255);
+    margin-right: 5px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+form.contact {
+    background-color: rgb(255, 255, 5);
+}
+
+form.contact div {
+    width: 50%;
+}
+
+form.contact input[type="text"],
+form.contact textarea {
+    background-color: transparent;
+    border: none;
+    border-bottom: 2px solid black;
+    width: 100%;
+}
+
+form.contact input[type="submit"] {
+    background: transparent;
+    padding: 10px 40px;
+    margin: 20px 0;
+}
+
+form.contact input[type="submit"]:hover {
+    background: black;
+    color: white;
+
+    /* El cursor cambia a una mano indicando así al usuario que ouede clickar sobre él */
+    cursor: pointer;
+}

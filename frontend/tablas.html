@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tablas en HTML</title>
+    <style>
+        table.tabla1 {
+            border: 4px solid black;
+            border-collapse: collapse;
+            /* Esta línea hace que las celdas se junten eliminando espacios en blanco */
+
+            text-align: center;
+        }
+
+        .tabla1 th {
+            border: 2px solid black;
+            padding: 5px 10px;
+            background-color: lightgray;
+        }
+
+        .tabla1 td {
+            border: 1.5px solid grey;
+
+        }
+
+        table.tabla2 {
+            border: 4px solid black;
+            border-collapse: collapse;
+            /* Esta línea hace que las celdas se junten eliminando espacios en blanco */
+
+            font-family: Arial, Helvetica, sans-serif;
+            width: 300px;
+        }
+
+        .tabla2 th {
+            text-align: left;
+            padding: 5px;
+            background-color: rgb(172, 172, 172);
+            border-right: 1px solid rgb(146, 146, 146);
+            width: 300px;
+
+
+        }
+
+        .tabla2 td {
+            border: 1px solid rgb(115, 115, 115);
+            text-align: right;
+            border-bottom: 1px solid rgb(193, 193, 193);
+            padding: 5px;
+
+
+
+        }
+
+        .tabla2 td.nombre {
+            text-align: left;
+            font-weight: bold;
+            /* Permite usar la negrita sin estar poniendo las etiquetas(<b>) o 
+            clases de una en una */
+            background-color: rgb(229, 229, 229);
+        }
+        hr {
+            height: 2px;
+            background-color: black;
+            border: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <H1>Tablas en HTML</H1>
+    <table class="tabla1">
+        <tr>
+            <!-- Fila de cabeceros -->
+            <th>
+                nombre
+            </th>
+            <th>
+                apellido
+            </th>
+            <th>
+                edad
+            </th>
+        </tr>
+        <tr>
+            <td>
+                María
+            </td>
+            <td>
+                Cepeda
+            </td>
+            <td>
+                18
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Rebeca
+            </td>
+            <td>
+                Cánonico
+            </td>
+            <td>
+                29
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Dafne
+            </td>
+            <td>
+                Ribera
+            </td>
+            <td>
+                21
+            </td>
+
+
+        </tr>
+        <tr>
+            <td>Erlantz</td>
+            <td>
+                Martínez
+ .
+
+            </td>
+            <td>
+                23
+            </td>
+        </tr>
+
+    </table>
+
+<hr>
+    <table class="tabla2">
+        <tr>
+            <th>
+                Person
+            </th>
+            <th>
+                Age
+            </th>
+        </tr>
+        <tr>
+            <td class="nombre">
+                Chris
+            </td>
+            <td>
+                38
+            </td>
+        </tr>
+        <tr>
+            <td class="nombre">
+                Dennis
+            </td>
+            <td>
+                45
+            </td>
+        </tr>
+        <tr>
+            <td class="nombre">
+                Sarah
+            </td>
+            <td>
+                29
+            </td>
+        </tr>
+        <tr>
+            <td class="nombre">
+                Karen
+            </td>
+            <td>
+                47
+            </td>
+        </tr>
+
+    </table>
+</body>
+
+</html>

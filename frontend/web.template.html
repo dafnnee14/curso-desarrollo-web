@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plantilla de una página web</title>
+
+    <style>
+     
+        body {
+            margin: 0;
+        }
+
+        section {
+            display: flex;
+        }
+
+        section div {
+            padding: 10px;
+        }
+
+        header {
+            background-color: rgb(56, 185, 185);
+            color: white;
+            height: 180px;
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        header h1 {
+            margin-bottom: 0;
+        }
+
+        nav {
+            background-color: rgb(41, 37, 37);
+            display: flex;
+            justify-content: space-between;
+
+            padding: 5px 0;
+        }
+        /* Si le indicamos 2 cifras al padding, tomará el primer valor para el padding vertical y el segundo para el horizontal */
+
+        nav a {
+            text-decoration: none;
+            color: rgb(240, 230, 230);
+
+            padding: 5px;
+        }
+        /* :Hover es un estado especial, que se aplica al pasar el ratón/cursor por encima del elemento */
+        nav a:hover {
+            color: rgb(75, 75, 75);
+            background-color: rgb(220,220,220);
+        }
+
+        section {
+            display: flex;
+        }
+
+        section div {
+            padding: 10px;
+        }
+        .div-izq {
+            width: 30%;
+        }
+
+        .div-der {
+            width: 70%
+        }
+
+        footer {
+            background-color: lightgrey;
+            text-align: center;
+            padding: 1%;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <!-- Esto es la cabecera de la web -->
+        <h1>
+            My website
+        </h1>
+        <h5>A website created by me.</h5>
+    </header>
+
+    <nav>
+
+        <!-- Esto es el menú de navegación -->
+
+        <div>
+            <a href="#">link</a>
+            <a href="#">link</a>
+            <a href="#">link</a>
+        </div>
+        <div>
+            <a href="#">link</a>
+        </div>
+    </nav>
+
+    <section>
+        <div class="div-izq">
+            <!-- Esto es el contenedor de la izquierda -->
+            <h2>about me</h2>
+            <p>photo of me:</p>
+            <img width="100%" height="150px"
+                src="https://www.pixelstalk.net/wp-content/uploads/2016/04/Grey-backgrounds-for-desktop.jpg"
+                alt="imagen gris">
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem, nemo!</p>
+            <h3>More text</h3>
+            <p>Lorem ipsum dolor sit amet.</p>
+            <img width="100%" height="50px"
+                src="https://www.pixelstalk.net/wp-content/uploads/2016/04/Grey-backgrounds-for-desktop.jpg"
+                alt="imagen gris">
+            <img width="100%" height="50px"
+                src="https://www.pixelstalk.net/wp-content/uploads/2016/04/Grey-backgrounds-for-desktop.jpg"
+                alt="imagen gris">
+            <img width="100%" height="50px"
+                src="https://www.pixelstalk.net/wp-content/uploads/2016/04/Grey-backgrounds-for-desktop.jpg"
+                alt="imagen gris">
+        </div>
+        <div class="div-der">
+            <!-- Este es el contenedor de la derecha -->
+            <h2>TITLE HEADING</h2>
+            <p>Title description, Dec 7,2017</p>
+            <img width="100%" height="150px"
+                src="https://www.pixelstalk.net/wp-content/uploads/2016/04/Grey-backgrounds-for-desktop.jpg"
+                alt="imagen gris">
+            <p>Some text.</p>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Recusandae eveniet exercitationem fugit commodi
+                voluptas debitis?</p>
+
+            <h2>TITLE HEADING</h2>
+            <p>Title description, Dec 7,2017</p>
+            <img width="100%" height="150px"
+                src="https://www.pixelstalk.net/wp-content/uploads/2016/04/Grey-backgrounds-for-desktop.jpg"
+                alt="imagen gris">
+            <p>Some text.</p>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Recusandae eveniet exercitationem fugit commodi
+                voluptas debitis?</p>
+        </div>
+    </section>
+
+    <footer>
+        <h2>Footer</h2>
+    </footer>
+
+
+</body>
+
+</html>

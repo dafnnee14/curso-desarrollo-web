@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elementos semánticos</title>
+
+    <style>
+        .container {
+            border: 1px solid black;
+            text-align: center;
+        }
+        .flex-container {
+            display: flex;
+           justify-content: center;
+        }
+
+        .left-container {
+            width: 60%;
+        }
+        .right-container {
+            height: 50%;
+            box-sizing: border-box;
+            /* Impide que el elemento se sobresalga */
+        }
+        .rigth-container aside {
+            height: 100%;
+            padding: 40px 0;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Elementos semánticos de HTML</h1>
+
+    <div class="container">
+        <header class="container">
+            <h1>Título</h1>
+        </header>
+        <nav class="container">
+            <h1>Menú de navegación</h1>
+        </nav>
+        <div class="flex-container">
+        </div class=left-container>
+        <header>
+            <nav class="container">
+                <section>
+                    <h1>seccion</h1>
+                </section>
+                <article class="container">
+                    <h1>articulo</h1>
+                </article>
+            </nav>
+            <div class="right-container">
+            <aside class="container">
+                <aside>
+                    <h1>lateral</h1>
+                </aside>
+    </div>
+    </div>
+    <footer class="container">
+        <h1>pie de página</h1>
+    </footer>
+
+
+</body>
+
+</html>

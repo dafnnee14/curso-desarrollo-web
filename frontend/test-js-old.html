@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prueba de JavaScript</title>
+
+    <link rel="stylesheet" href="general.css">
+
+    <style>
+        myheader {
+            /* En CSS  */
+            font-size: 80%;
+            background-color: tomato;
+            border: 4px dotted white;
+        }
+    </style>
+</head>
+
+<body>
+    <p>
+        Si el HTML proporciona la estructura del documento, el CSS el estilo
+    </p>
+    <h1>Mi primer JavaScript</h1>
+    <p id="txt"></p>
+
+    <button onlick="changeTxt()">Click me!</button>
+
+</html>
+<h1 id="myheader">Título personalizado</h1>
+<button onclick="fixheader()">Arreglar Título</button>
+</body>
+<script>
+    // 
+    // 
+
+
+
+fuction changeTxt() {
+        // Con "document"accederemos a una serie de funciones del documento
+        // "getElementById()" encuentra el elemento que dicha id
+        // innerHTML se refiere a la propiedad del elemento para acceder al contenido que está entre las etquetas
+        document.getElementById("txt").innerHTML = "He cambiado el texto usando JavaScript"
+    }
+
+fuction fixHeader() {
+    function fixHeader() {
+        // lo primero es buscar el header y actuar sobre el 
+        document.getElementById("myHeader");
+
+        // corregir el color del fondo usando la propiedad style:
+        document.getElementById("myHeader").style.backgroundColor = "#255585";
+        document.getElementById("myHeader").style.Color = "white";
+
+        // quitar el borde
+        document.getElementById("myHeader").style.border = "none";
+        // agrandar la letra
+        document.getElementById("myHeader").style.fontsize= "40px"
+        // centrar el texto
+        document.getElementById("myHeader").align-items="center"
+</script>
