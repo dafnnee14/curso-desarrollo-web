@@ -29,3 +29,39 @@ let texto
 
 // Imprimimos la palabra
 displayPalabra.innerHTML = palabra;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// con clases
+// seleccionamos todos los elementos que tengan una clase
+// al guardar elementos con clase, me los devuelve en un array
+const botones = document.getElementsByClassName("btn");
+
+// al pulsar un boton de la clase "btn", me va a ejecutar una función
+
+// vamos a añadir un Event Listener a cada botón
+//  Event Listener es asignarle un tipo de evento al elemento HTML que ejecutará un bloque de código cuando el evento se cumpla
+// por ejemplo al hacer click en un botón o al pasar el ratón por encima del cursor (hover)
+
+for (let i = 0; i < botones.length; i++) {
+
+}
