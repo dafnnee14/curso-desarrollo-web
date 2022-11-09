@@ -1,0 +1,27 @@
+@import url('https://fonts.cdnfonts.com/css/m37-feel-the-bit');
+
+body {
+    background: rgb(22, 22, 22);
+    color: #00a6ff;
+    font-family: 'M37_FEEL THE BIT', sans-serif;
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    height: 100vh;
+    margin: 0;
+
+    user-select: none;
+}
+
+h1 {
+    font-size: 35px;
+    margin-bottom: 0;
+}
+
+h5 {
+    font-size: 8px;
+}
