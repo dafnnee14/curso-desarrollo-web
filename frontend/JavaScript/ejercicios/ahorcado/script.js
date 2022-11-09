@@ -62,8 +62,18 @@ const botones = document.getElementsByClassName("btn");
 //  Event Listener es asignarle un tipo de evento al elemento HTML que ejecutará un bloque de código cuando el evento se cumpla
 // por ejemplo al hacer click en un botón o al pasar el ratón por encima del cursor (hover)
 
-for (let i = 0; i < botones.length; i++) {
-    botones[i].addEventListener("click", test)
+for (let i = 0; i < palabra.length; i++) {
+    console.log(palabra[i]);
+
+    //  Comprobamos si la letra de la palabra coincide con la letra del btn
+
+    if (palabra[i] == letra) {
+        console.log("Hay una coincidencia!")
+        texto += "_";
+    } else {
+        // Si entra en el else, es que no han habido coincidencias
+        texto += "_";
+    }
 }
 
 function test() {
@@ -72,7 +82,15 @@ function test() {
     // Tomamos el contexto del botón
     // Guardamos la letra que contiene el botón en una variable
     let letra = this.innerHTML;
+    // Transformo la letra en minúscula
+    letra = letra.toLowerCase();
 
+    let texto = "";
+
+    // Recorremos la palabra, caracter a caracter; en busca de coincidencias 
+    // con la letra pulsada 
+
+    displayPalabra.innerHTML = texto;
 
     console.log(letra);
 }
