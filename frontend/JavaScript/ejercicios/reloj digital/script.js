@@ -53,7 +53,7 @@ function displayDate() {
     let texto = '';
 
     const dias = [
-        "domingo",
+        "domingo", 
         "lunes",
         "martes",
         "miércoles",
