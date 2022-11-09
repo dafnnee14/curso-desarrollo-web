@@ -63,5 +63,16 @@ const botones = document.getElementsByClassName("btn");
 // por ejemplo al hacer click en un botón o al pasar el ratón por encima del cursor (hover)
 
 for (let i = 0; i < botones.length; i++) {
+    botones[i].addEventListener("click", test)
+}
 
+function test() {
+    console.log("Has pulsado un botón")
+
+    // Tomamos el contexto del botón
+    // Guardamos la letra que contiene el botón en una variable
+    let letra = this.innerHTML;
+
+
+    console.log(letra);
 }
