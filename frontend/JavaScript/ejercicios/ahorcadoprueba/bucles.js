@@ -1,4 +1,5 @@
 const display = document.getElementById("display")
+const displayLetras = document.getElementById("displayLetras")
 
 let texto = "";
 
@@ -12,7 +13,7 @@ for (let i = 1; i <= 20; i++) {
 display.innerHTML = texto;
 
 display.innerHTML = texto;
-console.log(arrayNumeros)
+// console.log(arrayNumeros)
 
 const letras = [
 "a",
@@ -25,5 +26,7 @@ const letras = [
 texto = "";
 
 for (let i = 0; i < letras.length; i++) {
-    texto += letras[i] + ""; 
+    texto += letras[i] + " "; 
 }
+
+displayLetras.innerHTML = texto;
