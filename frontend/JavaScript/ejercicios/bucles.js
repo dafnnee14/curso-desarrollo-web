@@ -68,35 +68,3 @@ for (let i = 99; i >= 3; i = i - 3) {
 display.innerHTML = texto;
 // display.innerHTML = pares.join('<br>');
 // display.innerHTML = arrayNumeros;
-
-
-// Números pares hasta el 100, y que cada vez que 
-//  salga un múltiplo de 5 vaya en negrita
-
-let txt = "";
-
-for (let i = 2; i <= 100; i = i + 2) {
-
-    // Si se divide i entre 5
-}
-
-
-
-
-
-display.innerHTML = txt;
-
-// Cuenta atras en un array
-
-let countdown = [];
-
-for (let i = 0; i < arrayNumeros.length; i++) {
-    for (let j = 100; j >= 0 j--) {
-
-        countdown[i] = j;
-        i++;
-    }
-}
-
-console.log(countdown)
-display.innerHTML 0 countdown.join("<br>");
