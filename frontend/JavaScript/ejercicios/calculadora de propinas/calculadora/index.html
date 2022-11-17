@@ -1,51 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calculadora</title>
+    <title>Calculadora de propinas con JavaScript</title>
 
     <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
+
     <div class="container">
-        <div class="display">
-            <input type="text" id="input">
-        </div>
-        <div class="operators">
-            <button>+</button>
-            <button>-</button>
-            <button>x</button>
-            <button>:</button>
-        </div>
-        <div class="keys">
-            <div class="numbers">
-                <button>7</button>
-                <button>8</button>
-                <button>9</button>
+        <h1>Calculadora de propina</h1>
 
-                <button>4</button>
-                <button>5</button>
-                <button>6</button>
-
-                <button>1</button>
-                <button>2</button>
-                <button>3</button>
-
-                <button>0</button>
-                <button>.</button>
-                <button class="clear" id="clear">C</button>
-            </div>
-            <div class="equal" id="equal">
-                <button>=</button>
-            </div>
+        <div>
+            <p>
+                Gasto total de la cuenta:
+            </p>
+            <p>
+                <input name="inputCuenta" id="cuentaTotal" type="number" min="0" oninput="validity.valid||(value='')"> €
+            </p>
         </div>
+
+        <div>
+            <p>
+                Calidad del servicio:
+            </p>
+            <select name="calidadServ" id="calidadServ">
+                <option disabled selected>-- Elige una opción --</option>
+                <option value="0.05">★</option>
+                <option value="0.1">★★</option>
+                <option value="0.15">★★★</option>
+                <option value="0.2">★★★★</option>
+                <option value="0.3">★★★★★</option>
+            </select>
+        </div>
+ 
+        <div>
+            <p>
+                Número de comensales:
+            </p>
+            <p>
+                <input id="numPersonas" type="number" min="0" oninput="validity.valid||(value='')"> personas.
+            </p>
+            
+        </div>
+
+        <div>
+            <button onclick="calcularPropina()">Calcular!</button>
+        </div>
+
+        <div id="divResultado">
+            <p id="pResultado">Resultado</p>
+        </div>
+
+        
     </div>
-
+    
 </body>
 <script src="script.js"></script>
-
 </html>

@@ -1,113 +1,27 @@
-// declaramos constantes con los elementos a utilizar
-const input = document.getElementById('input');
-const numbers = document.querySelectorAll('.numbers button');
-const operators = document.querySelectorAll('.operators button');
-const result = document.getElementById('equal');
-const clear = document.getElementById('clear');
+function calcularPropina() {
+    // Tomamos los datos que ha introducido el usuario
+    let cuenta = document.getElementById('cuentaTotal').value;
+    let servicio = document.getElementById('calidadServ').value;
+    let personas = document.getElementById('numPersonas').value;
 
-// mostramos un valor por defecto
-input.value = 0;
+    // Calculo la propina que debe pagar cada uno y lo guardo en una letiable
+    let resultado = cuenta * servicio / personas; //resultado = 1.43733
+    // resultado = resultado.toFixed(2);          //resultado = 1.44  
 
-// variables para guardar los valores y los resultados
-let value1, value2 = 0;
-let operator = '';
+    // Accedo al elemento donde quiero imprimir el resultado
+    let parrafo = document.getElementById('pResultado');
 
-// asignamos un event listener a los botones de números
-// hacemos un bucle que recorra el array entero y asigne el evento a cada botón
-for (let i = 0; i < numbers.length; i++) {
-    numbers[i].addEventListener('click', write)
-}
-
-function write() {
-    console.log(this.innerHTML);
-
-    // limpio la pantalla si sólo hay un cero
-    if (input.value == 0) {
-        input.value = '';
+    if (resultado > 0) {
+        // Lo muestro porque está oculto por defecto
+        parrafo.style.visibility = 'visible';
+        // Y lo relleno con el texto que quiero mostrar
+        parrafo.innerHTML = resultado.toFixed(2) + "€ por persona";
     }
 
-    input.value += this.innerHTML;
-
+    // Imprimimos los datos en la consola
+    console.log(cuenta + " €");
 }
 
-// limpiar la pantalla al pulsar el botón C
-clear.onclick = () => {
-    input.value = 0;
-    value1, value2 = 0;
-    operator = '';
-}
+// Para obtener la propina hay que multiplicar el gasto por la calidad del servicio para obtener el correspondiente porcentaje y, por tanto, la propina total
 
-
-// aignamos eventos a los operadores
-for (let i = 0; i < operators.length; i++) {
-    operators[i].addEventListener('click', operate)
-}
-
-function operate() {
-    // lo primero es identificar el operador que hemos clicado
-    operator = this.innerHTML;
-    value1 = parseFloat(input.value);   // un float es un numero con decimales
-    input.value = '';
-    console.log(operator);
-
-    // if (operator == '+') {
-    //     // se suma
-    // } else if (operator == '-') {
-    //     // se resta
-    // } else if (operator == '×') {
-    //     // se multiplica
-    // } else if (operator == '÷') {
-    //     // se divide
-    // }
-
-    // switch (operator) {
-    //     case '+':
-    //         // se suma
-    //         console.log('has pulsado la suma');
-    //         break;
-    //     case '-':
-    //         // se resta
-    //         break;
-    //     case '×':
-    //         // se multiplica
-    //         break;
-    //     case '÷':
-    //         // se divide
-    //         break;
-
-    //     default:
-    //         console.log('el operador ha fallado');
-    //         break;
-    // }
-
-}
-
-result.onclick = () => {
-    value2 = parseFloat(input.value);
-
-    switch (operator) {
-        case '+':
-            // se suma
-            console.log('has pulsado la suma');
-            console.log(value1)
-            console.log(value2)
-            input.value = value1 + value2;
-            break;
-        case '-':
-            // se resta
-            input.value = value1 - value2;
-            break;
-        case '×':
-            // se multiplica
-            input.value = value1 * value2;
-            break;
-        case '÷':
-            // se divide
-            input.value = value1 / value2;
-            break;
-
-        default:
-            console.log('el operador ha fallado');
-            break;
-    }
-}
+// Seguidamente dividir la propina entre el número de comensales para obtener lo que debe pagar cada uno
