@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio grid</title>
+
+    <link rel="stylesheet" href="../../general.css">
+    <style>
+        .grid-container {
+            display: inline-grid;
+            grid-template-columns: auto auto auto;
+            gap: 20px 5px;
+
+            background-color: #2196f3;
+            padding: 10px;
+        }
+
+        .grid-item {
+            background-color: rgba(255, 255, 255, 0.8);
+            border: 1px solid rgba(0, 0, 0, 0.8);
+            padding: 20px;
+            font-size: 20px;
+            text-align: center;
+        }
+        .header {
+            grid-row-start: 1;
+            grid-column-start: 1;
+            grid-row-end: 2;
+            grid-column-end: 4;
+        }
+
+        .menu {
+            grid-row-start: 2;
+            grid-column-start:1 ;
+            grid-row-end: 4;
+            grid-column-end: 2;
+        }
+        .footer {
+            grid-row-start: 3;
+            grid-column-start: 2;
+            grid-row-end: ;
+            grid-column-end: 4;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="grid-container">
+        <div class="grid-item header">Header</div>
+        <div class="grid-item menu">Menu</div>
+        <div class="grid-item main">Main</div>
+        <div class="grid-item right">Right</div>
+        <div class="grid-item footer">Footer</div>
+
+    </div>
+
+</body>
+
+</html>

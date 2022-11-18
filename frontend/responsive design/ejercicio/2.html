@@ -1,27 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Grid</title>
+    <title>Ejercicio 2 de grid</title>
 
     <link rel="stylesheet" href="../../general.css">
+
     <style>
         .grid-container {
             display: inline-grid;
-            /* auto indica el número de columnas, en este caso 3 */
-            grid-template-columns: auto auto auto;
-            /* también podemos asignar un espacio vacio entre os elementos */
-            /* column-gap: 5px; */
-            /* row-gap: 20px; */
+            grid-template-columns: auto auto auto auto auto auto;
             gap: 20px 5px;
 
-           
             background-color: #2196f3;
             padding: 10px;
-
         }
 
         .grid-item {
@@ -31,25 +25,18 @@
             font-size: 20px;
             text-align: center;
         }
+        .item8 {
+            grid-row-start: 5;
+            grid-column-start: 2;
+            grid-row-end: 1;
+            grid-column-end: 6;
+            background-color: white;
+        }
+        
+        
     </style>
 </head>
-
 <body>
-    <h1>Grid o rejilla</h1>
-    <p>
-        El sistema grid de CSS permite utilizar una plantilla de rejilla, con filas y columnas, para alinear de manera
-        sencilla páginas web sin necesidad de usar float o posicionamiento.
-    </p>
-
-    <h2>Elementos grid</h2>
-    <p>
-        Una rejilla consiste en un elemento padre, con uno o más hijos.
-    </p>
-    <p>
-        El elemento padre debe de tener la propiedad <code>display: grid</code> o <code>inline-grid</code>. Los
-        elementos descendientes se convertirán automáticamente en objetos(items) grid.
-    </p>
-
     <div class="grid-container">
         <div class="grid-item">1</div>
         <div class="grid-item">2</div>
@@ -58,13 +45,15 @@
         <div class="grid-item">5</div>
         <div class="grid-item">6</div>
         <div class="grid-item">7</div>
-        <div class="grid-item">8</div>
+        <div class="grid-item item8">8</div>
         <div class="grid-item">9</div>
         <div class="grid-item">10</div>
         <div class="grid-item">11</div>
         <div class="grid-item">12</div>
+        <div class="grid-item">13</div>
+        <div class="grid-item">14</div>
+        <div class="grid-item">15</div>
     </div>
-
 </body>
 
 </html>
