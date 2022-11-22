@@ -19,7 +19,7 @@
     animation: rotate 1.5s linear infinite;
     width: 30px;
     height: 30px;
-    border: 5px solid #c966a8;
+    border: 5px solid deeppink;
     border-bottom: 5px dashed transparent;
     border-radius: 50%;
 }
@@ -46,10 +46,10 @@
     /* filter: blur(px); */
     animation: blur 2s ease-in-out infinite alternate;
     background: black;
-    color: #c966a8;
+    color: deeppink;
     padding: 0px 5px;
     border-radius: 5px;
-    text-shadow: 0px, 0px, 3px #c966a8;
+    text-shadow: 0px, 0px, 3px deeppink;
 }
 
 @keyframes rotate {
@@ -71,21 +71,21 @@
 @keyframes blur {
     0% {
         filter: blur(0px);
-        text-shadow: 0px 0px 0px #c966a8;
+        text-shadow: 0px 0px 0px deeppink;
     }
 
     25% {
         filter: blur(.4px);
-        text-shadow: 0px 0px 15px #c966a8;
+        text-shadow: 0px 0px 15px deeppink;
     }
 
     50% {
         filter: blur(.25px);
-        text-shadow: 0px 0px 3px #c966a8;
+        text-shadow: 0px 0px 3px deeppink;
     }
 
     75% {
         filter: blur(.45px);
-        text-shadow: 0px 0px 6px #c966a8;
+        text-shadow: 0px 0px 6px deeppink;
     }
 }
