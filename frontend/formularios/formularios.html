@@ -7,7 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulario</title>
 
-    <link rel="stylesheet" href="general.css">
+    <link href="http://fonts.cdnfonts.com/css/chill-out-gang" rel="stylesheet">
+    <link rel="stylesheet" href="../general.css">
     <link rel="stylesheet" href="./css/form-styles.css">
 
     <style>
@@ -17,81 +18,107 @@
 
 <body>
 
-
     <h1>Formularios en HTML</h1>
 
     <h2>Formulario sencillo</h2>
 
     <form class="simple-form" action="#">
-        <h2>HTML form</h2>
-
+        <h2>HTML Form</h2>
         <div>
-            <label for="First Name:">First name:</label>
-            <input type="text" name="First Name:" id="" required>
+            <label for="firstName">First Name: </label>
+            <input type="text" name="firstName" id="" required>
         </div>
         <div>
-            <!-- br es un salto de línea -->
-            <label for="Last Name:">Last name:</label>
-            <input type="text" name="Last Name:" id="">
+            <label for="lastName">Last Name: </label>
+            <input type="text" name="lastName" id="">
         </div>
         <div>
-            <label for="Date Of Bird:">Date Of Bird:</label>
-            <input type="date" name="Date Of Bird:" id="">
+            <label for="dateOfBirth">Date of Birth: </label>
+            <input type="date" name="dateOfBirth" id="">
         </div>
         <div>
             <label for="gender">Gender:</label>
             <div>
-                <input type="radio" name="gender" Id="">Male
-                <input type="radio" name="gender" Id="">Female
-                <input type="radio" name="gender" Id="">Other
+                <input type="radio" name="gender" value="male">Male
+                <input type="radio" name="gender" value="female">Female
+                <input type="radio" name="gender" value="other">Other
             </div>
         </div>
         <div>
-            <label for="">Owned vehicles:</label>
-            <input type="checkbox" name="" id="">Car
-            <input type="checkbox" name="" id="">Motorbike
-            <input type="checkbox" name="" id="">Bycicle
+            <label for="vehicles">Owned vehicles:</label>
+            <div>
+                <input type="checkbox" name="vehicles" value="car">Car
+                <input type="checkbox" name="vehicles" value="motorbike">Motorbike
+                <input type="checkbox" name="vehicles" value="bycicle">Bycicle
+            </div>
         </div>
         <div>
-            <label for="Email Id:">Email Id:</label>
-            <input type="email" name="Email Id:" id="">
+            <label for="emailId">Email Id: </label>
+            <input type="email" name="emailId" id="">
         </div>
         <div>
-            <label for="Mobile Number:">Mobile Number:</label>
-            <input type="sumbit" name="Mobile Number:" id="">
+            <label for="mobileNumber">Mobile Number: </label>
+            <input type="number" name="mobileNumber" id="">
         </div>
         <div>
-            <button type="submit" value="submit">
-                SUBMIT
-            </button>
-            <button type="reset">
-                RESET
-            </button>
+            <input type="submit" value="Submit">
+            <button type="reset">Reset</button>
         </div>
-
-
     </form>
-    <h2>Formulario de contrato</h2>
+
+    <h2>Formulario de contacto</h2>
 
     <form class="contact" action="">
-        </div>
-        <div>
-            <input type="text" placeholder="Enter your Name">
+
+        <div class="contact-left">
+            <input type="text" placeholder="Enter your name">
             <br>
-            <input type="text" placeholder="Enter a valid E-mail address">
+            <input type="text" placeholder="Enter a valid email address">
             <br>
             <textarea name="" id="" cols="30" rows="10"></textarea>
-        </div>
-        <input type="SUBMIT" name="" id="" value="SUBMIT">
 
-        <div class="">
-            <b>CONTACT US</b>
+            <input type="submit" name="" id="" value="SUBMIT">
         </div>
 
     </form>
 
+    <h2>Formulario de alquiler de vehículos</h2>
 
+    <form class="renting" action="">
+        <label for="tipos">Por favor, seleccione un tipo de vehículo</label>
+        <!-- El selector nos da a elegir entre un conjuntos de opciones preestablecidas -->
+        <select name="tipos" id="">
+            <option value="coche">Coche</option>
+            <option value="moto">Moto</option>
+            <option value="furgoneta">Furgoneta</option>
+        </select>
+
+        <br>
+
+        <label for="marcas">Seleccione marca del vehículo</label>
+        <input name="marcas" list="marcas">
+        <!-- Datalist + input nos genera un cuadro de inserción de datos con una lista de sugerencias -->
+        <datalist id="marcas">
+            <option value="Fiat"></option>
+            <option value="Citröen"></option>
+            <option value="Renault"></option>
+            <option value="Audi"></option>
+        </datalist>
+
+        <br>
+        <input type="submit">
+
+
+    </form>
+
+    <h2>Formulario de inicio de sesión o login</h2>
+
+    <form action="" class="login">
+        <input name="user" type="text" placeholder="Ingrese usuario">
+        <br>
+        <input name="password" type="password" placeholder="Inserte contraseña">
+        <br>
+        <input type="submit">
+    </form>
 
 </body>
-
-</html>
