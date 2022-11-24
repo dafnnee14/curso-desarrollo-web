@@ -43,25 +43,25 @@ body {
 }
 
 .grid-container .buttons:nth-child(1) {
-    background: ;
+    background: goldenrod;
 }
 
 .grid-container .buttons:nth-child(2) {
-    background: crimson;
+    background: blue;
 }
 
 .grid-container .buttons:nth-child(3) {
-    background: lightseagreen;
+    background: deeppink;
 }
 
 .grid-container .buttons:nth-child(4) {
-    background: gold;
+    background: yellowgreen;
 }
 
 .grid-container .buttons:nth-child(5) {
-    background: salmon;
+    background: lightseagreen;
 }
 
 .grid-container .buttons:nth-child(6) {
-    background: deeppink;
+    background: violet;
 }
