@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Html2</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <div id="search-container"></div>
+        <input type="search" id="search-input" placeholder="search name product here.." />
+        <button id="search">Search</button>
+    </div>
+    <div id="buttons">
+        <button class="button-value" onclick="filterProduct(`all`)">ALL</button>
+        <button class="button-value" onclick="filterProduct(`Topwear`)">Topwear</button>
+        <button class="button-value" onclick="filterProduct(`Bottomwear`)">Bottomwear</button>
+        <button class="button-value" onclick="filterProduct(`Jacket`)">Jacket</button>
+        <button class="button-value" onclick="filterProduct(`Watch`)">Watch</button>
+    </div>
+    <div id="products">
+        <div class="card Topwear"> == $0
+            <div class="image-container">
+                <img src="white-tshirt.jpg">
+            </div>
+            <div class="container"></div>
+        </div>
+        <div class="card Bottomwear">...</div>
+        <div class="card watch">...</div>
+        <div class="card Topwear">...</div>
+        <div class="card Jacket">...</div>
+        <div class="card Bottomwear">...</div>
+        <div class="card Jacket">...</div>
+        <div class="card Bottomwear">...</div>
+    </div>
+    </div>
+</body>
+<script src="script.js"></script>
+
+</html>
