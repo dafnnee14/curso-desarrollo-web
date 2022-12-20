@@ -110,6 +110,46 @@
                 <p>span 5</p>
             </div>
         </div>
+
+        <h2>Comportamiento de las columnas</h2>
+        <div class="container-fluid">
+            <!-- Dejar que BS decida automáticamente -->
+            <div class="row">
+                <div class="col bg-primary text-white border">columna auto</div>
+                <div class="col bg-primary text-white border">columna auto</div>
+                <div class="col bg-primary text-white border">columna auto</div>
+            </div>
+            <!-- Configurar el comportamiento según el dispositivo -->
+            <div class="row">
+                <div class="col-sm-3 bg-primary text-white border">columna col-sm-4</div>
+                <div class="col-sm-3 bg-primary text-white border">columna col-sm-4</div>
+                <div class="col-sm-3 bg-primary text-white border">columna col-sm-4</div>
+                <div class="col-sm-3 bg-primary text-white border">columna col-sm-4</div>
+            </div>
+            <div class="row">
+                <div class="col-md-6 bg-primary text-white border">columna col-md-6</div>
+                <div class="col-md-6 bg-primary text-white border">columna col-md-6</div>
+            </div>
+        </div>
+        <p>
+            <code>.col-*-*</code>:El primer * representa la responsividad:
+            sm, md, lg, xl, o xxl. La segunda representa un número, el cual debe sumar hasta 12 en cada fila.
+        </p>
+        <p>
+            Si no indicamos estos valors, BS dividirá equitativamente el espacio entre los elementos de la fila.
+        </p>
+
+        <pre>
+
+
+
+
+
+
+
+...
+
+</pre>
 </body>
 
 </html>
