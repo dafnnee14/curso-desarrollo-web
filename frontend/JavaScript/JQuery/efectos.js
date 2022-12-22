@@ -23,4 +23,9 @@ $(document).ready(function () {
     $('#btnFadeTo').click(function () {
         $('p').fadeToggle('slow', 0.3);
     });
+
+    // slide
+    $('.blue').click(function () {
+        $('#divSlide').slideToggle(1000);
+    });
 });
