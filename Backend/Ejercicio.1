@@ -1,0 +1,36 @@
+CREATE TABLE pub (
+    cod_pub         VARCHAR(5)NOT NULL,
+    nombre          VARCHAR(60)NOT NULL,
+    licencia_fiscal VARCHAR(60)NOT NULL,
+    domicilio       VARCHAR(60)        ,
+    fecha_apertura  DATE       NOT NULL,
+    horario         VARCHAR(60)NOT NULL,
+    cod_localidad   INTEGER   NOT NULL );
+
+
+CREATE TABLE titular (
+dni_titular   VARCHAR(8)  NOT NULL,
+nombre        VARCHAR(60) NOT NULL,
+domicilio     VARCHAR(60)         ,
+cod_pub       VARCHAR(5)  NOT NULL) ;
+
+CREATE TABLE empleado (
+dni_empleado  VARCHAR(8)  NOT NULL,
+nombre        VARCHAR(60) NOT NULL,
+cod_pub       VARCHAR(60)         ) ;
+
+CREATE TABLE existencias (
+cod_articulo  VARCHAR(10)  NOT NULL,
+nombre        VARCHAR(60)  NOT NULL,
+cantidad      INTEGER      NOT NULL
+precio        DECIMAL      NOT NULL,
+cod_pub       VARCHAR(5)   NOT NULL ) ;
+
+CREATE TABLE localidad (
+cod_localidad  INTEGER      NOT NULL,
+nombre         VARCHAR(60)  NOT NULL ) ;
+
+CREATE TABLE pub_empleado (
+cod_pub        VARCHAR(5)  NOT NULL,
+dni_empleado   VARCHAR(8)  NOT NULL,
+funcion        VARCHAR(9)  NOT NULL ) ;                                               
