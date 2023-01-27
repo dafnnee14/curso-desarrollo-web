@@ -1,0 +1,65 @@
+/* GENERALES */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: var(--cfondo);
+    font: sans-serif;
+}
+
+.container {
+    /* border: 3px solid red; */
+    max-width: 90%;
+    margin: auto;
+    margin-top: 20px;
+}
+
+:root {
+    --cfondo: rgb(207, 211, 212);
+    --cfondoForm1: rgba(1, 80, 88, 0.39);
+    --cfondoForm2: rgb(129, 193, 202);
+    --cnegro: black;
+    --ctexto: rgb(14, 81, 88);
+}
+
+/* FORMULARIO */
+
+.form {
+    /* border: 3px solid green; */
+    border-top: 2px solid black;
+    max-width: 400px;
+    padding: 30px 50px;
+    margin: auto;
+    margin-top: 10px;
+    background: linear-gradient(0deg,
+            var(--cfondoForm1) 0%,
+            var(--cfondoForm2) 50%);
+}
+
+.form-titulo {
+    font-weight: bold;
+    font-size: 30px;
+    text-align: center;
+    margin: 0;
+    margin-bottom: 20px;
+    letter-spacing: 3px;
+}
+
+.form-input {
+    border: 3px solid red;
+    margin-bottom: 30px;
+}
+
+.form-input label {
+    display: block;
+    margin-top: 10px;
+    font-size: 15px;
+    color: var(--ctexto);
+}
+
+.form-input input {
+    width: 100%;
+    border: none;
+}
