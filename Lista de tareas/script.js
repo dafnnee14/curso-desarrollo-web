@@ -1,50 +1,42 @@
-// Info date
-const dateNumber = document.getElementById('dateNumber');
-const dateText = document.getElementById('dateText');
-const dateMonth = document.getElementById('dateMonth');
-const dateYear = document.getElementById('dateYear');
+// Cogemos los elementos
+var inputTarea = document.getElementById("tarea");
+var btn = document.getElementById("agregar");
+var lista = document.getElementById("lista");
+var cantidad = document.getElementById("cantidad");
 
-// Task container
-const tasksContainer = document.getElementById('tasksContainer');
+// Variable ue lleva la cantidad de tareas
+var total = 0;
 
-const setDate = () => {
-    // Aqui se va a ver todo, en vez de en partes y el texto se pondrá si o si en español
-    const date = new Date();
-    dateNumber.textContent = date.toLocaleString('es', { day: 'numeric' });
-    dateText.textContent = date.toLocaleString('es', { weekday: 'long' });
-    dateMonth.textContent = date.toLocaleString('es', { month: 'short' });
-    dateYear.textContent = date.toLocaleString('es', { year: 'numeric' });
-};
+// Función que agrega la tarea a la lista
+btn.onclick = function () {
+    // Controlamos si el campo esta vacio
+    if (inputTarea == "") {
+        return;
+    }
+    // Cogemos el valor del campo
+    var elemento = inputTarea.value;
+    // Creamos un elemento li
+    var li = document.createElement("li");
+    li.textContent = elemento;
+    // Agregamos el li a la lista
+    lista.appendChild(li);
 
-const addNewTask = event => {
-    event.preventDefault();
-    const { value } = event.target.taskText;
-    // Con el value evitaremos que se agreguen tareas vacías
-    if (!value) return;
-    // Para poner los estilos propios
-    const task = document.createElement('div');
-    task.classList.add('task', 'roundBorder');
-    task.addEventListener('click', changeTaskState)
-    task.textContent = value;
-    tasksContainer.prepend(task);
-    event.target.reset();
-};
+    // Ponemos la cantidad de tareas
+    total++;
+    cantidad.innerHTML = total;
 
-const changeTaskState = event => {
-    event.target.classList.toggle('done');
-};
-// Vamos a poner 2 Arrays
-const order = () => {
-    const done = [];
-    const toDo = [];
-    tasksContainer.childNodes.forEach(el => {
-        el.classList.contains('done') ? done.push(el) : toDo.push(el)
-    })
-    return [...toDo, ...done];
-}
+    // Agregamos el botón de eliminar a cada elemento li
+    var btnEliminar = document.createElement("span");
+    btnEliminar.textContent = "\u00d7";
+    li.appendChild(btnEliminar);
 
-const renderOrderedTasks => {
-    order().forEach(el => tasksContainer.appendChild(el))
-}
+    // Agregamos la funcionalidad que elimina la tarea de la lista 
+    btnEliminar.onclick = function () {
+        li.remove();
+        total--;
+        cantidad.innerHTML = total;
+    }
 
-setDate();
+    // Limpiamos el campo input
+    inputTarea.value = "";
+} 

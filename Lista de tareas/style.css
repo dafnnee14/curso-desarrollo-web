@@ -1,65 +1,54 @@
-:root {
-    --primary: #a5c882;
-    --secondary: #d33f49;
-    --light: #fff;
-    --dark: #000;
-    --diabled: #e7e7e7;
+* {
+    box-sizing: border-box;
 }
 
-body {
-    font-family: 'lato', 'sans-serif';
-    margin: 0;
-    height: 100vh;
-    background-color: var(--diabled);
-}
-
-/* Para que todas las letras primeras empiezen en Mayus */
-*:first-letter {
-    text-transform: capitalize;
-}
-
-.roundBorder {
+section {
+    max-width: 600px;
+    margin: auto;
+    text-align: center;
+    border: 1px solid #000;
     border-radius: 5px;
+    padding: 10px;
+    background-color: #ffc107;
 }
 
-.list {
-    margin: 25px auto;
-    padding: 25px;
-    background-color: var(--light);
-    width: 100%;
-    max-width: 350px;
+input {
+    width: 70%;
+    padding: 10px;
 }
 
-.date {
-    display: flex;
-    align-items: center;
+button {
+    width: 20%;
+    margin: 15px 0;
+    padding: 15px;
+    border-radius: 50px;
+    border: none;
+    cursor: pointer;
+    background-color: #000;
+    color: #fff;
 }
 
-#dateNumber {
-    font-size: 50px;
+ul {
+    text-align: left;
 }
 
-#dateText {
-    letter-spacing: 3px;
-    text-transform: uppercase;
+ul li {
+    border-bottom: 1px dashed #333;
+    margin: 8px 0;
 }
 
-#dateMonth,
-#dateNumber,
-#dateText {
-    font-weight: bold;
+span {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-color: firebrick;
+    border-radius: 100%;
+    text-align: center;
+    color: #fff;
+    margin: 0 10px;
+    cursor: pointer;
 }
 
-#dateMonth,
-#dateYear {
-    margin-left: 7px;
-    font-size: 20px;
-}
-
-form {
-    margin: 20px 0;
-    display: grid;
-    grid-auto-flow: column;
-    grid-template-columns: auto 35px auto;
-    grid-column-gap: 15px;
+span:hover {
+    background-color: darkred;
 }
