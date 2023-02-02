@@ -1,0 +1,22 @@
+body {
+    margin: 300px;
+    background: var(--cfondoForm1);
+    font: sans-serif;
+}
+
+.container {
+    /* border: 3px solid red; */
+    max-width: 90%;
+    margin: auto;
+    margin-top: 20px;
+}
+
+:root {
+    --cfondo: rgb(207, 211, 212);
+    --cfondoForm1: pink;
+    --cfondoForm2: pink;
+    --cnegro: black;
+    --ctexto: pink;
+    --ctextoDark: pink;
+    --cblanco: white;
+}
