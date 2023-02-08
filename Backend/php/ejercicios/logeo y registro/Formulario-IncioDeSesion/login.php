@@ -22,8 +22,9 @@ if (empty($uname)) {
 
 if (mysql_num_rows($result) === 1) {
     $row = mysqli_fetch_assoc($result);
-
-    print_r($row);
+if($row['user_name'] === $uname && $row['password'] === $password) {
+    # coder... 
+}
 }else{
     header("Loation: index.php?error=Incorrect User name or password");
     exit();
