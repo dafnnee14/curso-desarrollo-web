@@ -9,7 +9,6 @@ return $
  }};
  
  
- 
 $uname = validate($_POST['uname']);
 $uname = validate($_POST['password']);
 
