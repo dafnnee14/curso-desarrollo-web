@@ -15,7 +15,8 @@
         <form action="padre" method="POST" class="formulario">
             <h2>REGISTRAR</h2>
             <?php
-
+            include("modelo/conexion_bd.php");
+            include("controlador/controlador_regitsrar_usuario.php");
             ?>
             <div class="padre">
                 <label for="">Nombres</label>
