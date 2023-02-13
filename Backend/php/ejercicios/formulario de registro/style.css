@@ -7,18 +7,25 @@
 }
 
 body {
+    margin: 0 auto;
     background-image: url(/frontend/CSS/orde.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
     background-attachment: fixed;
+
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 main {
     width: 100%;
     padding: 20px;
     margin: auto;
-    margin-top: 100%;
+    /* margin-top: 100%; */
 }
 
 .contenedor__todo {
@@ -90,7 +97,73 @@ main {
     border-radius: 20px;
 }
 
+.contenedor__login-register form h2 {
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #46A2FD;
+}
+
+.contenedor__login-register form input {
+    width: 100%;
+    margin-top: 20px;
+    padding: 10px;
+    border: none;
+    background: #f2f2f2;
+    font-size: 16px;
+    outline: none;
+}
+
+.contenedor__login-register form button {
+    padding: 10px 40px;
+    margin-top: 40px;
+    border: none;
+    font-size: 14px;
+    background: #46A2FD;
+    color: white;
+    cursor: pointer;
+    outline: none;
+}
+
 .formulario__login {
     opacity: 1;
     display: block;
+}
+
+.formulario__register {
+    display: none;
+}
+
+/* Trabajando en el responsive Design */
+
+@media screen and (max-width: 850px) {
+
+    main {
+        margin-top: 50px;
+    }
+
+    .caja__trasera {
+        max-width: 350px;
+        height: 300px;
+        flex-direction: column;
+        margin: auto;
+    }
+
+    .caja__trasera div {
+        margin: 0px;
+        position: absolute;
+    }
+
+    /* Formulario */
+
+    .contenedor__login-register {
+        top: -10px;
+        left: -5px;
+        margin: auto;
+    }
+
+    .contenedor__login-register form {
+        position: relative;
+    }
+
 }
