@@ -2,7 +2,7 @@
 // 1. Crear un bucle que imprima los números del 1 al 10
 for ($i=0; $i < ; $i++) { 
     # code...
-}
+}ºº
 // 1.1 
 //  1-2-3-4-5-6-7-8-9-10
 
@@ -72,10 +72,16 @@ echo "El string '$text' contiene $contador r";
 //  8. Escribir un programa que cree automáticamente una tabla con las tablas de multiplicar con
 // el alcance que nosotros le indiquemos 
 // Ejemplo: Alcance 6. Primera fila de la tabla 
-for f in range(1,11) {
-	multiplicacion = 6 * f 
-	print(f'6 x {f} = {multiplicacion}')
+$alcance = 6;
+$producto = 1;
+echo "<table><tr>";
+for ($i = 1; $i <= $alcance; $i++) {
+    echo "<td>";
+    echo "$producto * $i = " . $producto*$i;
+    echo "</td>";
 }
+echo "</tr>";
+echo "</table>";
 //  | 1 * 1 = 1 | 1 * 2 = 2 | 1 * 3 = 3... | 1 * 6 = 6 |
 // ... 
 //  | 6 * 1 = 6 | 6 * 2 = 12 | 6 * 3 = 18... | 6 * 6 = 36 | 
