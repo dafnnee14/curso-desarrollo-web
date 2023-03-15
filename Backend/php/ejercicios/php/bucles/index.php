@@ -95,116 +95,38 @@ echo "</table>";
 
 // 11. Escribir un programa de PHP que itere los números del 1 al 50. Al imprimirlos, los múltiplos de 3 se sustituirán por 'Fizz', los múltiplos de 5 por 'Buzz' y los que sean múltiplos de 3 y 5 por 'FizzBuzz'.
 
+echo "<h3>12.Escribir un programa capaz de imprimir un tríangulo de floyd con tantas filas como le indiquemos</h3>"
+$alcance = 12;
+$contador = 1;
+$espacio = "&nbsp;&nbsp;";
 
-declare(strict_types=1);
+for ($fila = 1; $fila <= $alcance; $fila++) {
 
-function FizzBuzz()
-{
-    for ($i = 1; $i <= 100; $i++) {
-        if (isDivisibleBy3And5($i)) {
-            print("fizzbuzz\n");
-        } elseif (isDivisibleBy3($i)) {
-            print("fizz\n");
-        } elseif (isDivisibleBy5($i)) {
-            print("buzz\n");
-        } else {
-            print($i . "\n");
-        }
+    for ($col=1; $col <= $fila; $col++) {
+        if ($contador < 10) echo "0";
+        echo $contador;
+        echo $espacio;
+        $contador++;
     }
+    echo "<br>";
 }
 
-function isDivisibleBy3(int $number): bool
-{
-    return ($number % 3) == 0;
-}
 
-function isDivisibleBy5(int $number): bool
-{
-    return ($number % 5) == 0;
-}
+// 13. Escribir un bucle de PHP que imprima una A
 
-function isDivisibleBy3And5(int $number): bool
-{
-    return ($number % 3) == 0 && ($number % 5) == 0;
-}
+//   * * *
+// *       *
+// *       *
+// * * * * *
+// *       *
+// *       *
+// *       *
+// *       *
 
-FizzBuzz();
-// 12. Crear un triangulo de Floyd
-import Data.List (genericLength)
-import Test.QuickCheck (Positive (Positive), quickCheck)
- 
--- 1ª solución
--- ===========
- 
-trianguloFloyd1 :: [[Integer]]
-trianguloFloyd1 = floyd 1 [1..]
-  where floyd n xs = i : floyd (n+1) r
-          where (i,r) = splitAt n xs
- 
--- 2ª solución
--- ===========
- 
-trianguloFloyd2 :: [[Integer]]
-trianguloFloyd2 = iterate siguienteF [1]
- 
--- (siguienteF xs) es la lista de los elementos de la línea xs en el
--- triángulo de Floyd. Por ejemplo,
---    siguienteF [2,3]    ==  [4,5,6]
---    siguienteF [4,5,6]  ==  [7,8,9,10]
-siguienteF :: [Integer] -> [Integer]
-siguienteF xs = [a..a+n]
-    where a = 1 + last xs
-          n = genericLength xs
- 
--- 3ª solución
--- ===========
- 
-trianguloFloyd3 :: [[Integer]]
-trianguloFloyd3 =
-  [[(n*(n-1) `div` 2) + 1 .. (n*(n+1) `div` 2)] | n <- [1..]]
- 
--- 4ª solución
--- ===========
- 
-trianguloFloyd4 :: [[Integer]]
-trianguloFloyd4 =
-  scanl (\(x:_) y -> [x+y..x+2*y]) [1] [1..]
- 
--- Comprobación de equivalencia
--- ============================
- 
--- La propiedad es
-prop_trianguloFloyd :: Positive Int -> Bool
-prop_trianguloFloyd (Positive n) =
-  all (== (trianguloFloyd1 !! n))
-      [trianguloFloyd2 !! n,
-       trianguloFloyd3 !! n,
-       trianguloFloyd4 !! n]
- 
--- La comprobación es
--- λ> quickCheck prop_trianguloFloyd
--- +++ OK, passed 100 tests.
- 
--- Comparación de eficiencia
--- =========================
- 
--- La comparación es
---    λ> (trianguloFloyd1 !! 5000) !! 5000
---    12507501
---    (1.47 secs, 2,505,005,752 bytes)
---    λ> (trianguloFloyd2 !! 5000) !! 5000
---    12507501
---    (0.79 secs, 2,416,259,176 bytes)
---    λ> (trianguloFloyd3 !! 5000) !! 5000
---    12507501
---    (0.00 secs, 1,809,152 bytes)
---    λ> (trianguloFloyd4 !! 5000) !! 5000
---    12507501
---    (0.01 secs, 3,517,896 bytes)
---
---    λ> (trianguloFloyd3 !! (10^7)) !! 0
---    50000005000001
---    (2.45 secs, 1,656,534,080 bytes)
---    λ> (trianguloFloyd4 !! (10^7)) !! 0
---    50000005000001
---    (10.86 secs, 5,302,760,752 bytes)
+
+// 14. Escribir un bucle de PHP que sea capaz de imprimir este patrón:
+
+// 1 5 9
+// 2 6 10
+// 3 7 11
+// 4 8 12
