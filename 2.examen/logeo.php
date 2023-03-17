@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tabla con php</title>
+    <title>Tabla php</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css%22%3E
 <style>
      body {
@@ -25,7 +25,7 @@ include "conn.php";
 if ($_SERVER['REQUEST_METHOD'] = 'POST') {
     // Recibimos las variables del form
     $user = $_POST['nombre'];
-    // $username = $_POST['username'];
+
     $password = $_POST['password'];
 
 
@@ -42,13 +42,13 @@ if ($_SERVER['REQUEST_METHOD'] = 'POST') {
 
        $_SESSION['logged'] = true;
        while ($row = $result->fetch_assoc()) {
-        // Creamos una array $row con los resultados de la query del usuario
+
         $_SESSION['id'] = $row['id']; // Primary key
         $_SESSION['tipo_usuario'] = $row['tipo_usuario'];
         $_SESSION['nombre'] = $row['nombre'];
         }
     } else {
-        // En caso de login incrrecto:
+        // En caso de login incorrecto:
         header('Location: login-form.php?fallo=true');
     }
 }
