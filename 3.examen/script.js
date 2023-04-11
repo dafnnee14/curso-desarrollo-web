@@ -46,7 +46,7 @@ function dibujarCarta(CJ) {
         carta.x += 300;
     };
     // Para cargar la imagen correcta concatenamos el numero y el palo, que coincida con el nombre del fichero
-    CJ.img.src = "imagenes/cartas/" + CJ.valor.toString() + CJ.palo + ".svg";
+    CJ.img.src = "imagenes/carta/" + CJ.valor.toString() + CJ.palo + ".svg";
 }
 
 function pedirCarta() {
