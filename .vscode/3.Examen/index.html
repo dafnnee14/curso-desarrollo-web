@@ -21,7 +21,32 @@
                     <th id="loss header">Losses</th>
                     <th id="draw header">Draws</th>
                 </tr>
+
+                <tr>
+                    <td><span id="wins">0</span></td>
+                    <td><span id="losses">0</span></td>
+                    <td><span id="draws">0</span></td>
+                </tr>
             </table>
+        </div>
+
+        <div class="flex-blackjack-row-2">
+            <div id="your-box">
+                <h2>You: <span id="your-blackjack-result">0</span></h2>
+            </div>
+
+            <div id="dealer-box">
+                <h2>Dealer: <span id="dealer-blackjack-result">0</span></h2>
+            </div>
+        </div>
+
+        <div class="flex-blackjack-row-3">
+            <div>
+                <button class="btn-lg btn.primary mr-2" id="blackack-hit-button">Hit</button>
+                <button class="btn-lg btn.warning mr-2" id="blackack-stand-button">Stand</button>
+                <button class="btn-lg btn.danger mr-2" id="blackack-deal-button">Deal</button>
+                <button class="btn-lg btn.succes mr-2" id="blackack-reset-button">Restart</button>
+            </div>
         </div>
     </div>
     <script src="script.js"></script>
