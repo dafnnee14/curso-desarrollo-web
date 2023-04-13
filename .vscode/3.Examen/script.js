@@ -50,12 +50,20 @@ let windowidth = window.screen.width;
 let windowHeight = window.screen.height;
 let winner;
 
-document.querySelector("#blackjack-hit-button").addEventListener("click", blackjackHit);
+// Button Event Listeners
+documents
+    .querySelector("#blackjack-hit-button")
+    .addEventListener("click", blackjackHit);
+
+document
+    .querySelector('#blackjack-stand-button')
+    .addEventListener('click', blackjackStand);
 
 function blackjackHit() {
     if (blackjackGame['isStand'] === false) {
         let card = randomCard();
         showCard(card, YOU);
+        updateScore(card, YOU);
     }
 }
 
@@ -65,7 +73,71 @@ function randomCard() {
 }
 
 function showCard(card, activePlayer) {
-if(activePlayer['score'] <= 21) {
-    let cardImage = document.createElement("img")
+    if (activePlayer['score'] <= 21) {
+        let cardImage = document.createElement("img");
+        cardImage.src = `images/${card}.png`;
+        cardImage.style = `widht: ${widthSize()}; heigth: ${heightSize()};`;
+        document.querySelector(activePlayer["div"]).appendChild(cardImage);
+        hitSound.play();
+    }
 }
+
+function widthSize() {
+    if (windowidth > 1000) {
+        let newWidthSize = window.screen.width * 0.1;
+        return newWidthSize;
+    } else {
+        return window.screen.width * 0.18;
+    }
+}
+
+function heightSize() {
+    if (windowHeight > 1000) {
+        let newWidthSize = window.screen.height * 0.18;
+        return newheightSize;
+    } else {
+        return window.screen.height * 0.15;
+    }
+}
+
+function updateScore(card, activePlayer) {
+    if (card === 'A') {
+        if (activePlayer["score"] + blackjackGame["cardsMap"][card][1] <= 21) {
+            activePlayer["score"] += blackjackGame["cardsMap"][card][1];
+        } else {
+            activePlayer["score"] += blackjackGame["cardsMap"][card][0];
+        }
+    } else {
+        activePlayer["score"] += blackjackGame["cardsMap"][card];
+    }
+
+}
+
+function showScore(activePlayer) {
+    if (activePlayer['score'] > 21) {
+        document.querySelector(activePlayer['scoreSpan']).textContent = "BUST!";
+        document.querySelector(activePlayer['scoreSpan']).style.color = "red";
+    } else {
+        document.querySelector(activePlayer['scoreSpan']).textContent =
+            activePlayer["score"];
+    }
+}
+
+function blackjackStand() {
+    if (blackjackGame.pressOnce === false) {
+        blackjackGame['isStand'] = true;
+        let yourImages = document
+            .querySelector("#your-box")
+            .querySelectorAll("img");
+
+        for (let i = 0; i < yourImages.length; i++) {
+            let card = randomCard();
+            showCard(card, DEALER);
+            updateScore(card, DEALER);
+            showScore(DEALER);
+
+            blackjackGame['isTurnsOver'] = true;
+        }
+    }
+    blackjackGame.pressOnce = true;
 }
