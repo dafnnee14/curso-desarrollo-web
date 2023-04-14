@@ -42,16 +42,16 @@ let blackjackGame = {
 const YOU = blackjackGame["you"];
 const DEALER = blackjackGame["dealer"];
 
-const hitSound = new Audio("sounds/swish.m4a");
-const winSound = new Audio("sounds/cash.mp3");
-const loseSound = new Audio("sounds/aww.mp3");
+// const hitSound = new Audio("sounds/swish.m4a");
+// const winSound = new Audio("sounds/cash.mp3");
+// const loseSound = new Audio("sounds/aww.mp3");
 
 let windowidth = window.screen.width;
 let windowHeight = window.screen.height;
 let winner;
 
 // Button Event Listeners
-documents
+document
     .querySelector("#blackjack-hit-button")
     .addEventListener("click", blackjackHit);
 
