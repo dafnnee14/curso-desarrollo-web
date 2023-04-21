@@ -13,7 +13,7 @@ let blackjackGame = {
         score: 0,
     },
 
-    'cards': ["2", "3", "4", "5", "6", "7", "8", "9", "10", 'K', "J", "Q", "A"],
+    'cards': ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", '11', "12", "13"],
 
     cardsMap: {
         2: 2,
@@ -30,6 +30,10 @@ let blackjackGame = {
         Q: 10,
         A: [1, 11],
     },
+
+    'suits': [
+        "C", "D", "H", "S"
+    ],
 
     wins: 0,
     losses: 0,
@@ -74,17 +78,19 @@ function blackjackHit() {
 }
 
 function randomCard() {
-    let randomIndex = Math.floor(Math.random * 13);
-    return blackjackGame["cards"][randomIndex];
+    let randomIndex = Math.floor(Math.random() * 12);
+    let randomSuit = Math.floor(Math.random() * 3)
+    console.log(blackjackGame['cards'][randomIndex]+blackjackGame["suits"][randomSuit]);
+    return blackjackGame["cards"][randomIndex]+blackjackGame["suits"][randomSuit];
 }
 
 function showCard(card, activePlayer) {
     if (activePlayer['score'] <= 21) {
         let cardImage = document.createElement("img");
-        cardImage.src = `images/${card}.png`;
-        cardImage.style = `widht: ${widthSize()}; heigth: ${heightSize()};`;
+        cardImage.src = `ImagesCartas/${card}.svg`;
+        cardImage.style = `width: ${widthSize()}; height: ${heightSize()};`;
         document.querySelector(activePlayer["div"]).appendChild(cardImage);
-        hitSound.play();
+        // hitSound.play(); 
     }
 }
 
@@ -99,7 +105,7 @@ function widthSize() {
 
 function heightSize() {
     if (windowHeight > 1000) {
-        let newWidthSize = window.screen.height * 0.18;
+        let newheightSize = window.screen.height * 0.18;
         return newheightSize;
     } else {
         return window.screen.height * 0.15;
@@ -178,30 +184,30 @@ function computeWinner() {
 }
 
 function showWinner() {
-    let Message, messageColor;
+    let message, messageColor;
 
     if (winner === YOU) {
-        Message = 'You Win!'
+        message = 'You Win!'
         messageColor = '#00e676'
         document.querySelector('#wins').textContent = blackjackGame['wins'] += 1;
         winSound.play();
     }
 
     if (winner === DEALER) {
-        Message = 'You lost!'
+        message = 'You lost!'
         messageColor = 'red'
         document.querySelector('#losses').textContent = blackjackGame['losses'] += 1;
         loseSound.play();
     }
 
-    if (winner === Draw) {
-        Message = 'You Drew!'
+    if (winner === 'Draw') {
+        message = 'You Drew!'
         messageColor = 'yellow'
         document.querySelector('#draws').textContent = blackjackGame['draws'] += 1;
         loseSound.play();
     }
     if (winner === 'None') {
-        Message = 'You Both Busted!'
+        message = 'You Both Busted!'
         messageColor = 'orange'
         loseSound.play();
     }
