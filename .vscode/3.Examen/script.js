@@ -13,7 +13,7 @@ let blackjackGame = {
         score: 0,
     },
 
-    'cards': ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", '11', "12", "13"],
+    'cards': ["2", "3", "4", "5", "6", "7", "8", "9", "1O", "A", 'J', "K", "Q"],
 
     cardsMap: {
         2: 2,
@@ -73,7 +73,7 @@ function blackjackHit() {
     if (blackjackGame['isStand'] === false) {
         let card = randomCard();
         showCard(card, YOU);
-        updateScore(card, YOU);
+        updateScore(card.charAt(0), YOU);
     }
 }
 
@@ -123,7 +123,7 @@ function updateScore(card, activePlayer) {
         activePlayer["score"] += blackjackGame["cardsMap"][card];
     }
 
-
+    showScore(activePlayer);
 }
 
 function showScore(activePlayer) {
