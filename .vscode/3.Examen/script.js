@@ -3,17 +3,17 @@ let blackjackGame = {
         scoreSpan: '#your-blackjack-result',
         div: "#your-box",
         boxSize: '.flex-blackjack-row-2 div',
-        score: 0,
+        score: 0
     },
 
     dealer: {
         scoreSpan: '#dealer-blackjack-result',
         div: "#dealer-box",
         boxSize: '.flex-blackjack-row-2 div',
-        score: 0,
+        score: 0
     },
 
-    'cards': ["2", "3", "4", "5", "6", "7", "8", "9", "1O", "A", 'J', "K", "Q"],
+    'cards': ["2", "3", "4", "5", "6", "7", "8", "9", "0", 'J', "Q", "K", "A"],
 
     cardsMap: {
         2: 2,
@@ -24,7 +24,7 @@ let blackjackGame = {
         7: 7,
         8: 8,
         9: 9,
-        10: 10,
+        0: 10,
         K: 10,
         J: 10,
         Q: 10,
@@ -122,7 +122,9 @@ function updateScore(card, activePlayer) {
     } else {
         activePlayer["score"] += blackjackGame["cardsMap"][card];
     }
-
+    console.log(YOU["score"]);
+    console.log(card);
+    console.log(DEALER["score"]);
     showScore(activePlayer);
 }
 
@@ -147,7 +149,7 @@ function blackjackStand() {
         for (let i = 0; i < yourImages.length; i++) {
             let card = randomCard();
             showCard(card, DEALER);
-            updateScore(card, DEALER);
+            updateScore(card.charAt(0), DEALER);
             showScore(DEALER);
 
             blackjackGame['isTurnsOver'] = true;
@@ -190,26 +192,26 @@ function showWinner() {
         message = 'You Win!'
         messageColor = '#00e676'
         document.querySelector('#wins').textContent = blackjackGame['wins'] += 1;
-        winSound.play();
+        // winSound.play();
     }
 
     if (winner === DEALER) {
         message = 'You lost!'
         messageColor = 'red'
         document.querySelector('#losses').textContent = blackjackGame['losses'] += 1;
-        loseSound.play();
+        // loseSound.play();
     }
 
     if (winner === 'Draw') {
         message = 'You Drew!'
         messageColor = 'yellow'
         document.querySelector('#draws').textContent = blackjackGame['draws'] += 1;
-        loseSound.play();
+        // loseSound.play();
     }
     if (winner === 'None') {
         message = 'You Both Busted!'
         messageColor = 'orange'
-        loseSound.play();
+        // loseSound.play();
     }
 
     document.querySelector('#blackjack-result').textContent = message;
@@ -235,6 +237,8 @@ function blackjackDeal() {
 
         for (let i = 0; i < yourImages.length; i++) {
             yourImages[i].remove();
+        }
+        for (let i = 0; i < dealerImages.length; i++) {
             dealerImages[i].remove();
         }
 
