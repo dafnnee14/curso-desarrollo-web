@@ -15,7 +15,7 @@ body {
 .flex-blackjack-row-2,
 .flex-blackjack-row-3 {
     display: flex;
-    padding: 30px;
+    padding: 60px;
     flex-wrap: wrap;
     justify-content: space-evenly;
 }
@@ -30,6 +30,8 @@ body {
 .flex-blackjack-row-2 div img {
     padding: 10px;
     object-fit: contain;
+    width: 180px;
+    height: 228px;
 }
 
 .flex-blackjack-row-3 div {

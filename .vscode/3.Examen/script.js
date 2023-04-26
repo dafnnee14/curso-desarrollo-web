@@ -46,10 +46,6 @@ let blackjackGame = {
 const YOU = blackjackGame["you"];
 const DEALER = blackjackGame["dealer"];
 
-// const hitSound = new Audio("sounds/swish.m4a");
-// const winSound = new Audio("sounds/cash.mp3");
-// const loseSound = new Audio("sounds/aww.mp3");
-
 let windowidth = window.screen.width;
 let windowHeight = window.screen.height;
 let winner;
@@ -90,7 +86,6 @@ function showCard(card, activePlayer) {
         cardImage.src = `ImagesCartas/${card}.svg`;
         cardImage.style = `width: ${widthSize()}; height: ${heightSize()};`;
         document.querySelector(activePlayer["div"]).appendChild(cardImage);
-        // hitSound.play(); 
     }
 }
 
@@ -129,7 +124,7 @@ function updateScore(card, activePlayer) {
 }
 
 function showScore(activePlayer) {
-    // El Bust obviamente es la cifra 21(score)
+    // El Bust es "pasarse", por ejemplo, cuando se sobrepasa el veintiuno en una mano.
     if (activePlayer['score'] > 21) {
         document.querySelector(activePlayer['scoreSpan']).textContent = "BUST!";
         document.querySelector(activePlayer['scoreSpan']).style.color = "red";
@@ -192,26 +187,22 @@ function showWinner() {
         message = 'You Win!'
         messageColor = '#00e676'
         document.querySelector('#wins').textContent = blackjackGame['wins'] += 1;
-        // winSound.play();
     }
 
     if (winner === DEALER) {
         message = 'You lost!'
         messageColor = 'red'
         document.querySelector('#losses').textContent = blackjackGame['losses'] += 1;
-        // loseSound.play();
     }
 
     if (winner === 'Draw') {
         message = 'You Drew!'
         messageColor = 'yellow'
         document.querySelector('#draws').textContent = blackjackGame['draws'] += 1;
-        // loseSound.play();
     }
     if (winner === 'None') {
         message = 'You Both Busted!'
         messageColor = 'orange'
-        // loseSound.play();
     }
 
     document.querySelector('#blackjack-result').textContent = message;
@@ -230,10 +221,10 @@ function blackjackDeal() {
         document.querySelector('#dealer-blackjack-result').textContent = 0;
 
         document.querySelector('#your-blackjack-result').style.color = 'white';
-        document.querySelector('#dealer-blackjack-result').textContent = 'white';
+        document.querySelector('#dealer-blackjack-result').textContent = '0';
 
-        document.querySelector("#blackjack-result").textContent = "Let's Play";
-        document.querySelector('#blackjack-result').textContent = 'white';
+        document.querySelector("#blackjack-result").textContent = "";
+        document.querySelector('#blackjack-result').textContent = "Let's Play";
 
         for (let i = 0; i < yourImages.length; i++) {
             yourImages[i].remove();
